@@ -5,10 +5,7 @@ import QuestionDetail from "./screens/QuestionDetail.jsx";
 import QuestionDelete from "./screens/QuestionDelete.jsx";
 import QuestionEdit from "./screens/QuestionEdit.jsx";
 import Questions from "./screens/Questions.jsx";
-import { Routes, Route } from 'react-router-dom'
-
-
-
+import { Routes, Route } from 'react-router-dom' 
 
 import './App.css';
 
@@ -16,7 +13,6 @@ function App() {
   return (
     <div className="App">
         <Nav/>
-        <h1 className="title">TRIVIA</h1>
         <Routes>
         <Route path="/" element={<Home />}/>  
         <Route path="/questions" element={<Questions />}/>  
@@ -24,8 +20,6 @@ function App() {
         <Route path="/add-question" element={<QuestionCreate />}/>  
         <Route path="/questions/:id/edit" element={<QuestionEdit />}/>  
       </Routes>
-        
-
     </div>
   );
 }

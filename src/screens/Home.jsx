@@ -1,7 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { useEffect, useState } from 'react';
+
 
 function Home() {
+//   useEffect(()=>{
+
+//     console.log("Im in the home page")
+
+//   },[])
+
+
   return (
+    <>
+    <h1 className="title">TRIVIA</h1>
     <div className="game">
           <div className="question">Question?</div>
           <div className="options">
@@ -13,10 +24,10 @@ function Home() {
               <button className="answer">C</button>
               <button className="answer">D</button>  
             </div>
-            <button className="nextButton">Next Question</button>
           </div>
-
-        </div>
+    </div>
+    <button className="nextButton">Next Question</button>
+    </>
   )
 }
 

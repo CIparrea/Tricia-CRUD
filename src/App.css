@@ -8,9 +8,9 @@
   flex-direction: column;
   justify-content: top;
   align-items: center;
-  font-family: "Ojuju", sans-serif;
+  /* font-family: "Ojuju", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 400; */
   font-style: normal;
   color: white;
   text-transform: uppercase;
@@ -36,10 +36,6 @@ a:hover {
   color: rgb(47, 206, 206);
   }
 
-
-
-
-
 .title{
   font-size: 50px;
   padding: 0;
@@ -57,14 +53,21 @@ a:hover {
 }
 
 .question{
+  box-sizing: border-box;
   width: 350px;
   border: 5px solid white;
   border-radius: 25px;
   height: 130px;
+  display: flex;
   text-align: center;
-  font-size: 25px;
+  /* vertical-align: middle; */
+  /* line-height: 10px;   */
+  justify-content: center;
+  align-items: center;
+  font-size-adjust: 80%;
   margin-bottom: 5px;
-
+  padding: 0px 5px;
+  font-weight: 700;
 }
 
 .options{
@@ -90,8 +93,11 @@ a:hover {
   border-radius: 15px;
   height: 100%;
   width: 165px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  font-size: 25px;
+  font-size-adjust: 100%;
   background-color: rgb(26, 35, 65);
   color: white;
 }
@@ -101,3 +107,41 @@ a:hover {
   margin: 20px;
 }
 
+.showAllQuestions{
+  display:block;
+  /* flex-direction: column  ;
+  justify-content: center;
+  align-items: center; */
+  width: 350px;
+  height: 350px;
+  position: relative;
+  overflow: auto;
+}
+
+#allGames{
+  box-sizing: border-box;
+  /* border: 5px solid white;  */
+  border-radius: 20px;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+#rightAnswer{
+  color:green
+}
+
+#wrongAnswer{
+  color:red
+}
+
+.moreOptions button{
+  width: 70px;
+  margin: 10px 10px 0 10px;
+}
+
+.addButton{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-bottom: 10px;
+}
