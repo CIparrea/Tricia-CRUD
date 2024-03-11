@@ -19,9 +19,26 @@
 .allQuestions{
   width: 350px;
   /* border: 5px solid white; */
-  text-align: right;
   margin-top: 10px;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: right;
+  align-items: center;
 }
+
+a:-webkit-any-link {
+color: white;
+margin: 0px 10px;
+}
+
+a:hover {
+  color: rgb(47, 206, 206);
+  }
+
+
+
+
 
 .title{
   font-size: 50px;
