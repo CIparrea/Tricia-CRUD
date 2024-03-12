@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { editQuestion, getQuestion } from '../services/questions.js';
+import { editQuestion, getQuestion, deleteQuestion } from '../services/questions.js';
 
 function QuestionEdit() {
   const [question, setQuestion] = useState({
@@ -11,8 +11,9 @@ function QuestionEdit() {
     incorrect_answer3:"",
   })
  
-  let { id } = useParams()
+  let { id } = useParams();
   let navigate = useNavigate()
+  
 
   async function fecthQuestion() {
     const oneQuestion = await getQuestion(id)
@@ -52,6 +53,12 @@ function QuestionEdit() {
       [name]:value
     }))
 
+  }
+
+  const handleDelete = async (e) => {
+    e.preventDefault()
+    await deleteQuestion(id)
+    navigate(`/questions/`)
   }
 
   return (
@@ -107,7 +114,10 @@ function QuestionEdit() {
           </div>
       <div className="moreOptions">
           <button type="submit">Update</button>
-          <button>Delete</button>
+          <button
+            onClick={handleDelete}>
+            Delete
+            </button>
       </div>
       </form> 
     </div>

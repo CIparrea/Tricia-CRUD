@@ -17,6 +17,7 @@ function Questions() {
   },[])
 
 
+
   return (
     <div>
       <h1 className="title">ALL QUESTIONS</h1>
@@ -44,6 +45,7 @@ function Questions() {
                 <Link to={`/questions/${question._id}/edit`}>
                   <button>Edit</button>
                 </Link>
+ 
               </div>
               
           </div>
