@@ -43,5 +43,4 @@ export const deleteQuestion = async (id) =>{
     }catch(error){
         console.log(error)
     }
-
 };

@@ -29,7 +29,7 @@ function Questions() {
         {
           questions.map((question) => (
             <div className="game" id="allGames">
-              <div className="question">{question.question}</div>
+              <div className="question" dangerouslySetInnerHTML={{__html: question.question}}></div>
               <div className="options">
                 <div className="row">
                   <div className="answer" id="rightAnswer">{question.correct_answer}</div>
